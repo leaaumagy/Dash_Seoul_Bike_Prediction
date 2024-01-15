@@ -8,8 +8,8 @@ The goal of this project is to accurately predict bike rental demand in Seoul ba
 
 ## Detailed Installation Guide
 1. **Clone the Repository:** 
-   `git clone https://github.com/leaaumagy/Dashbord_Seoul_Bike_Prediction`
-2. **Acces the folder** : `cd ./Dashbord_Seoul_Bike_Prediction`
+   `git clone https://github.com/leaaumagy/Dash_Seoul_Bike_Prediction`
+2. **Acces the folder** : `cd ./Dash_Seoul_Bike_Prediction`
 3. **Install Dependencies:** 
    Navigate to the project directory and run `pip install -r requirements.txt`.
 4. **Run the Application:** 
