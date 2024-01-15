@@ -13,7 +13,7 @@ The goal of this project is to accurately predict bike rental demand in Seoul ba
 3. **Install Dependencies:** 
    Navigate to the project directory and run `pip install -r requirements.txt`.
 4. **Run the Application:** 
-   Start the server with `python app.py`. Access the dashboard through your web browser at `localhost:5000`.
+   Start the server with `python app.py`. Access the dashboard through your web browser at `http://127.0.0.1:8050/`.
 
 ## Usage
 After starting the application, navigate through the dashboard to:
