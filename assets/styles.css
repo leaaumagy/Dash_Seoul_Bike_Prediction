@@ -1,0 +1,328 @@
+/*On modifie la police  des différentes parties plutot que pour l'ensemble du document pour ne pas créer de conflit avec le tableau OLS*/
+H1 {
+    font-family: 'Arial', sans-serif;
+}
+H2 {
+    font-family: 'Arial', sans-serif;
+}
+p {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100vh; /* Utilise toute la hauteur de la fenêtre d'affichage */
+    width: 100vw; /* Utilise toute la largeur de la fenêtre d'affichage */
+    margin: 0; /* Aucune marge extérieure */
+}
+
+.sidebar {
+    flex: 0 0 270px;
+    background-color: #000000; /* Couleur de fond de base noire pour la compatibilité */
+    background-image: linear-gradient(to bottom right, #000000, #333333);
+    color: white;
+    padding: 10px;
+    border-radius: 9px;
+    font-family: monospace;
+}
+
+.page-content {
+    flex-grow: 1; /* Le contenu principal occupera tout l'espace restant */
+    padding: 0px 10px;
+    overflow-y: auto;
+}
+
+/* Définir les règles pour le corps (body) et le document HTML (html) */
+body, html {
+    overflow-x: hidden; /* Empêche le débordement horizontal */
+    overflow-y: hidden; /* Empêche le débordement vertical */
+}
+
+/* Styliser les titres dans la barre latérale */
+.sidebar h2 {
+    padding: 0;
+    margin: 0;
+    font-size: 22px; /* Taille de police */
+    margin-bottom: 10px; /* Marge en bas */
+}
+
+/* Ajouter une ligne horizontale dans la barre latérale */
+.sidebar hr {
+    margin-bottom: 20px; /* Marge en bas de la ligne */
+    border-color: #555; /* Couleur de la ligne */
+}
+
+/* Styliser les liens dans la barre latérale */
+.sidebar a {
+    font-family: 'Arial', sans-serif;
+    display: block; /* Afficher en tant que bloc pour occuper toute la largeur */
+    color: #ddd; /* Couleur du texte */
+    margin-bottom: 10px; /* Marge en bas */
+    text-decoration: none; /* Supprimer la soulignement du lien */
+    font-size: 18px; /* Taille de police */
+    transition: color 0.3s; /* Animation de transition de couleur au survol */
+}
+
+/* Changement de couleur du lien au survol */
+.sidebar a:hover {
+    color: rgb(0, 134, 11); /* Couleur du texte au survol */
+}
+
+.sidebar a.active {
+    background-color: none; /* Couleur de fond pour le lien actif */
+    color: rgb(0, 134, 11);
+}
+
+/* Styliser les éléments du menu principal */
+.divMenu {
+    padding: 12px 5px 10px 5px; /* Rembourrage interne */
+    margin-bottom: 11px; /* Marge en bas */
+}
+
+/* Fond coloré lors du survol du menu */
+.divMenu:hover {
+    background-color: #383838; /* Couleur de fond au survol */
+    border-radius: 8px; /* Coins arrondis */
+}
+
+/* Styliser le titre principal */
+.divTitle {
+    text-align: center; /* Alignement du texte au centre */
+    background-color: #000; /* Couleur de fond de base noire pour la compatibilité */
+    background-image: linear-gradient(to bottom right, #333333bd, #000000db); /* Dégradé de couleur de fond */
+    color: white; /* Couleur du texte */
+    font-family: monospace; /* Police de caractères monospace */
+    border-radius: 11px; /* Coins arrondis */
+    padding: 17px; /* Rembourrage interne */
+}
+
+/* Styliser les titres de section */
+.divH {
+    padding: 1px 13px; /* Rembourrage interne */
+    color: #fff; /* Couleur du texte */
+    background-image: linear-gradient(to bottom right, #000000bd, #000000db); /* Dégradé de couleur de fond */
+    width: 50%; /* Largeur de la boîte */
+    font-size: 14px; /* Taille de police */
+    border-top-right-radius: 15px; /* Coin supérieur droit arrondi */
+    border-bottom-right-radius: 15px; /* Coin inférieur droit arrondi */
+}
+
+/* Styliser le conteneur principal */
+.main-container {
+    margin: 20px; /* Marge extérieure */
+    font-family: 'Arial', sans-serif; /* Police de caractères */
+    color: #333; /* Couleur du texte */
+}
+
+/* Styliser les conteneurs des champs de saisie */
+.input-container {
+    margin-bottom: 20px; /* Marge en bas */
+}
+
+/* Styliser les libellés des champs de saisie */
+.input-label {
+    display: block; /* Afficher en tant que bloc pour occuper toute la largeur */
+    margin-bottom: 8px; /* Marge en bas */
+    color: #555; /* Couleur du texte */
+    font-size: 14px; /* Taille de police */
+}
+
+/* Styliser les champs de saisie */
+.input-field {
+    width: 100%; /* Largeur à 100% pour occuper toute la largeur */
+    padding: 12px 15px; /* Rembourrage interne */
+    border: 2px solid #ddd; /* Bordure du champ de saisie */
+    border-radius: 6px; /* Coins arrondis */
+    box-sizing: border-box; /* Pour éviter les problèmes de largeur */
+    font-size: 14px; /* Taille de police */
+}
+
+
+/* Ajouter un effet au focus des champs de saisie */
+.input-field:focus {
+    border-color: #aaa;
+    outline: none; /* Supprimer l'outline par défaut */
+}
+
+/* Styliser le bouton de prédiction */
+.predict-button {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 26px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.predict-button:hover {
+    background-color: #218838;
+}
+
+/* Styliser le titre de la prédiction */
+.prediction-title {
+    margin-top: 30px;
+    color: #000000;
+    font-size: 24px;
+}
+
+/* Styliser le résultat de la prédiction */
+.prediction-result {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-left: 4px solid #28a745;
+    font-size: 22px;
+    margin-bottom: 50px;
+    font-weight: 700;
+    text-align: center;
+    font-family: monospace;
+}
+
+
+
+.custom-tabs {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, rgb(6, 164, 0), rgb(6, 133, 1)); /* Dégradé */
+    color: rgb(2, 58, 0);
+    font-weight: bold;
+    border-radius: 15px; /* Bords arrondis */
+    padding: 10px; 
+    border: none; /* Supprimer la bordure */
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), /* Ombre légère */
+                0 2px 4px -1px rgba(0,0,0,0.06);
+}
+
+
+
+/* La track sur laquelle le thumb se déplace */
+.rc-slider-rail {
+    background-color: #ddd; /* Couleur de la track */
+    height: 6px; /* Hauteur de la track */
+    border-radius: 3px; /* Bords arrondis pour la track */
+}
+
+/* La partie de la track que le thumb a déjà dépassée */
+.rc-slider-track {
+    background-color: #70f070; /* Couleur de la partie dépassée */
+    height: 6px; /* Hauteur pour correspondre au rail */
+    border-radius: 3px; /* Bords arrondis pour la track */
+}
+
+/* Le thumb que l'utilisateur peut faire glisser */
+.rc-slider-handle {
+background-color: #4CAF50; /* Couleur de fond pour le thumb */
+border: 2px solid #FFF; /* Bordure pour le thumb */
+height: 14px; /* Hauteur du thumb */
+width: 14px; /* Largeur du thumb */
+margin-top: -4px; /* Ajustement pour centrer verticalement le thumb par rapport à la track */
+border-radius: 50%; /* Rendre le thumb rond */
+}
+
+.checklist-container {
+    padding: 10px;
+    background-color: #f5f5f5; /* Couleur de fond légère */
+    border-radius: 5px; /* Bords arrondis */
+    margin: 10px 0; /* Marge externe */
+    font-family: 'Arial', sans-serif; /* Police d'écriture plus moderne */
+}
+
+/* Styliser chaque checkbox */
+.checklist-container .Checkbox input[type="checkbox"] {
+    margin-right: 10px; /* Espace entre la checkbox et le label */
+    cursor: pointer; /* Curseur en forme de pointeur */
+    accent-color: #007bff; /* Couleur pour la coche de la checkbox */
+}
+
+.checklist-container label {
+    margin-right: 15px; /* Espace à droite de chaque label */
+    cursor: pointer; /* Curseur en forme de pointeur */
+    font-size: 16px; /* Taille de la police ajustée */
+    font-family: 'Arial', sans-serif; /* Police d'écriture cohérente avec le conteneur */
+}
+
+.checklist-container .selected label {
+    color: #007bff; /* Couleur du texte pour les éléments sélectionnés */
+    font-weight: bold; /* Rendre le texte des éléments sélectionnés en gras */
+}
+
+
+.checklist-container .selected label {
+    text-shadow: 0px 0px 1px #0056b3; /* Ombre subtile sur le texte sélectionné */
+}
+
+
+.Select--multi .Select-value-label, .Select-value-label {
+    color: rgb(0, 87, 10) !important; /* Couleur  pour les étiquettes */
+    font-size: 14px; /* Taille de police ajustée */
+    font-family: Arial, sans-serif; /* Style de police */
+    background-color: rgba(233, 245, 233, 0.5); /* Arrière-plan */
+    border: 1px solid rgba(0, 87, 10, 0.3); /* Bordure subtile */
+    padding: 2px 5px; /* Espacement intérieur */
+    border-radius: 4px; /* Bords arrondis */
+}
+
+.Select--multi .Select-value-label:hover, .Select-value-label:hover {
+    color: rgb(255, 255, 255); /* Couleur de survol*/
+    background-color: rgb(0, 140, 17); /* Arrière-plan de survol - vert plus vif */
+    border-color: rgb(0, 0, 0); /* Bordure de survol - vert plus vif */
+}
+
+.Select--multi .Select-control, .Select-control {
+    border: 2px solid rgb(0, 87, 10); /* Bordure plus épaisse */
+    background-color: white; /* Arrière-plan blanc pour le cadre */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère pour la profondeur */
+    border-radius: 5px; /* Coins arrondis */
+    padding: 5px; /* Espacement intérieur pour un aspect aéré */
+}
+
+.Select--multi .Select-control:hover, .Select-control:hover {
+    border-color: rgb(0, 123, 15); /* Bordure plus foncée lors du survol */
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée lors du survol */
+}
+
+.table-container {
+    /* Style pour le tableau Anova */
+    margin-top: 20px;
+    padding: 3px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    background-color: #000000;
+}
+
+
+.custom-dropdown-style {
+    font-family: 'Arial', sans-serif;
+    color: #333; /* Couleur du texte */
+    background-color: #f9f9f9; /* Couleur de fond */
+    border: 2px solid #000000; /* Bordure */
+    padding: 5px; /* Padding intérieur */
+    font-size: 14px; /* Taille de la police */
+    width: 20%; /* Largeur */
+    display: block; /* Type d'affichage */
+    margin: 10px auto; /* Marges */
+    border-radius: 4px; /* Rayon des coins */
+}
+
+.custom-dropdown-style .Select--multi .Select-control, .Select-control {
+    border: none; /* Aucune bordure pour le contrôle */
+    boxShadow: none; /* Aucune ombre */
+    background-color: transparent; /* Fond transparent */
+}
+
+.custom-dropdown-style .Select--multi .Select-value-label, .Select-value-label {
+    background-color: transparent; /* Fond transparent pour la valeur sélectionnée */
+    border: none; /* Aucune bordure pour la valeur sélectionnée */
+}
+
+
+
+.custom-dropdown-style .Select--multi .Select-value-label:hover, .Select-value-label:hover {
+    color: rgb(255, 255, 255); /* Couleur de survol - blanc */
+    background-color: rgb(255, 255, 255); /* Arrière-plan de survol */
+    border-color: rgb(0, 0, 0); /* Bordure de survol  */
+}
