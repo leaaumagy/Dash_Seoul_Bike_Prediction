@@ -40,7 +40,7 @@ We welcome contributions to this project. If you would like to contribute, pleas
 - Make your changes and submit a pull request.
 - Ensure that your code passes all tests and adheres to the project's coding standards.
 
-**Authors and acknowledgment**
+## Authors and acknowledgment
 We would like to express our gratitude to Professor J. Stern for his guidance and support throughout this project. His expertise and insights were invaluable in the successful completion of our study.
 
 ## License
